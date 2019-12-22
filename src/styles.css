@@ -1,0 +1,26 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", serif;
+}
+
+.btn {
+  height: 32px;
+    border-radius: 30px;
+    font-size: 11px;
+    border: 1px solid #312d3a;
+    color: white;
+    background: #673ab7;
+    cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: .65;
+  color: white!important;
+}

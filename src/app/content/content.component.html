@@ -1,0 +1,27 @@
+<mat-sidenav-container class="navbar-container">
+  <mat-sidenav mode="side" opened class="navbar">
+    <ul>
+      <li>
+        <a routerLink="/mailer" routerLinkActive="active">
+          <mat-icon>message</mat-icon>
+          Рассылка
+        </a>
+      </li>
+      <li>
+        <a routerLink="">
+          <mat-icon>calendar_today</mat-icon>
+          Аренда
+        </a>
+      </li>
+      <li>
+        <a routerLink="/users" routerLinkActive="active">
+          <mat-icon>people_alt</mat-icon>
+          Пользователи
+        </a>
+      </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
