@@ -6,7 +6,8 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
   providedIn: 'root'
 })
 export class MailerMessageService {
-  API_URL = 'http://127.0.0.1:8001/sender';
+  // API_URL = 'http://127.0.0.1:8001/sender';
+  API_URL = 'https://mmdance-bot.herokuapp.com/sender';
   headers = new HttpHeaders({ 'Content-Type': 'multipart/form-data' });
   constructor(private http: HttpClient) {}
 

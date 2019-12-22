@@ -7,7 +7,8 @@ import { Subscription } from "../subscription";
   {providedIn: 'root'}
 )
 export class ServiceSubscription {
-  API_URL = 'http://localhost:8001/api/subscriptions/';
+  // API_URL = 'http://localhost:8001/api/subscriptions/';
+  API_URL = 'https://mmdance-bot.herokuapp.com/api/subscriptions/';
 
   constructor(private http: HttpClient) {}
 

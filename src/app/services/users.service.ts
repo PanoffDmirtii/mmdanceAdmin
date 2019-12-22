@@ -7,7 +7,8 @@ import {User} from "../shared/user";
   providedIn: 'root'
 })
 export class UsersService {
-  API_URL = 'http://localhost:8001/api/users/';
+  // API_URL = 'http://localhost:8001/api/users/';
+  API_URL = 'https://mmdance-bot.herokuapp.com/api/users/';
 
   constructor(private http: HttpClient) {}
 
