@@ -1,0 +1,33 @@
+.wrapper {
+  padding: 25px;
+}
+
+.subtitle {
+  font-weight: 400;
+  margin: 10px 0 0 0!important;
+}
+
+.avatar {
+  width: 50%;
+  grid-area: avatar;
+}
+
+.data-card {
+  grid-area: card;
+}
+
+.data-wrapper {
+  display: grid;
+  grid-template-areas: "info avatar" "card card";
+  grid-auto-columns: 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+.data-user {
+  grid-area: info;
+}
+
+.accordion-items .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}

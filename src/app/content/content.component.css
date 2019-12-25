@@ -37,8 +37,7 @@ ul > li:hover {
 }
 
 .active {
-  font-weight: bold;
-  font-size: 1.1em;
+  font-weight: 500;
 }
 
 mat-icon {
