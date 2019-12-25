@@ -12,14 +12,15 @@
     </mat-card>
   </div>
   <div class="items">
-    <mat-card class="user-card" *ngFor="let user of users | userFilter:searchUser">
+    <mat-card class="user-card" *ngFor="let user of users | userFilter:searchUser" (click)="userInfo(user.id)">
       <mat-card-header class="header">
-        <mat-card-title>{{user.first_name}} {{user.last_name}}</mat-card-title>
+        <mat-card-title class="title">{{user.first_name}} {{user.last_name}}</mat-card-title>
         <img src="{{user.photo_50}}"/>
       </mat-card-header>
       <mat-card-content>
-          short info
+        TODO
       </mat-card-content>
     </mat-card>
   </div>
+  <button class="btn-add-user" mat-fab color="primary"><mat-icon>add</mat-icon></button>
 </div>

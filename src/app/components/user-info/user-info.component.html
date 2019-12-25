@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title class="title">
+        Карточка ученика
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="data-wrapper">
+        <div class="data-user">
+          <div>
+            {{user.first_name}} {{user.last_name}}
+          </div>
+      </div>
+        <div class="data-card">
+          История абонементов:
+          <mat-accordion class="accordion-items">
+            <mat-expansion-panel *ngFor="let item of user.my_card; let i = index">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{item.card.name}}
+                </mat-panel-title>
+                <mat-panel-description>
+                  {{item.date_start}} - {{item.date_end}}
+                  <mat-icon>date_range</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-list *ngFor="let dv of item.data_visits">
+                <mat-list-item>{{dv.visit}} - {{dv.date}}</mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="avatar">
+          <img src="{{user.photo_100}}" alt="">
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

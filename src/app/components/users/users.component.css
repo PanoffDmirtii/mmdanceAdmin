@@ -14,6 +14,12 @@
 
 .user-card {
   margin: 10px;
+  cursor: pointer;
+  width: 220px;
+}
+
+.user-card:active {
+  transform: translateY(2px);
 }
 
 .header {
@@ -23,3 +29,26 @@
   width: 70px;
   border-radius: 50%;
   }
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+mat-card-header {
+
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.btn-add-user {
+  position: fixed;
+  z-index: 20;
+  right: 5%;
+  bottom: 5%;
+}

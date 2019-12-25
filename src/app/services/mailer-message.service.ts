@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MailerMessageService {
-  API_URL = 'http://127.0.0.1:8001/sender';
-  headers = new HttpHeaders({ 'Content-Type': 'multipart/form-data' });
+  API_URL = environment.API_URL + '/sender';
   constructor(private http: HttpClient) {}
 
     startSendMessage(data): Observable<any> {
