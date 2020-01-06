@@ -21,7 +21,7 @@
                   {{item.card.name}}
                 </mat-panel-title>
                 <mat-panel-description>
-                  {{item.date_start}} - {{item.date_end}}
+                  {{item.date_start | date:'d MMMM yyyy'}} - {{item.date_end | date:'d MMMM yyyy'}}
                   <mat-icon>date_range</mat-icon>
                 </mat-panel-description>
               </mat-expansion-panel-header>
