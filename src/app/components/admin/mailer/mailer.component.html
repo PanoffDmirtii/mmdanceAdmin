@@ -7,7 +7,7 @@
       <mat-card-content class="block-input">
           <div class="block-input">
             <mat-form-field class="select">
-              <mat-select ngModel name="subscription" placeholder="Выберите аудитоию подписчиков" required>
+              <mat-select ngModel name="subscription" placeholder="Выберите аудиторию подписчиков" required>
                 <mat-option *ngFor="let s of subscriptions" value="{{s.id}}">{{s.topic}}</mat-option>
               </mat-select>
             </mat-form-field>

@@ -1,0 +1,11 @@
+.wrapper {
+  background: #f8f8f8;
+}
+
+.page-not-found {
+  display: flex;
+  justify-content: center;
+}
+
+.page-not-found img {
+}

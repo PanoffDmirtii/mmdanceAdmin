@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ServiceSubscription} from "../../services/service-subscription";
-import {NgForm} from "@angular/forms";
-import {Subscription} from "../../subscription";
-import {MailerMessageService} from "../../services/mailer-message.service";
+import {ServiceSubscription} from '../../../services/service-subscription';
+import {NgForm} from '@angular/forms';
+import {Subscription} from '../../../subscription';
+import {MailerMessageService} from '../../../services/mailer-message.service';
 
 @Component({
   selector: 'app-mailer',
@@ -22,17 +22,17 @@ export class MailerComponent implements OnInit {
 
   ngOnInit() {
     this.serviceSubscribers.getAudience().subscribe((values) => {
-      this.subscriptions = values
-    })
+      this.subscriptions = values;
+    });
   }
 
   disabledButton(formData: NgForm) {
-    return formData.value.text === '' || formData.value.subscription === ''
+    return formData.value.text === '' || formData.value.subscription === '';
   }
 
   onUploadFile(files) {
     this.uploadFile = files;
-    console.log(files)
+    console.log(files);
   }
 
   onSubmit(formData: NgForm) {
@@ -41,23 +41,23 @@ export class MailerComponent implements OnInit {
       data.append(
         'data', JSON.stringify(
           {
-            'select_topic': formData.value.subscription,
-            'text': formData.value.text
+            select_topic: formData.value.subscription,
+            text: formData.value.text
           }
         )
       );
       if (this.uploadFile !== null) {
-        data.append('file', this.uploadFile)
+        data.append('file', this.uploadFile);
       }
 
       this.serviceMailer.startSendMessage(data).subscribe(resp => {
           formData.resetForm();
-          this.response = resp
+          this.response = resp;
         },
         error => {
           console.log(error);
-          this.response = error
-        })
+          this.response = error;
+        });
     }
   }
 }
