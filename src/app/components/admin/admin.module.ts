@@ -20,6 +20,8 @@ import {HeaderComponent} from './header/header.component';
 import {FormsModule} from '@angular/forms';
 import {AdminRoutingModule} from './admin-routing.module';
 import {UsersPipe} from './shared/users.pipe';
+import { SchedulerComponent } from './scheduler/scheduler.component';
+import {FullCalendarModule} from '@fullcalendar/angular';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import {UsersPipe} from './shared/users.pipe';
     MailerComponent,
     PageNotFoundComponent,
     HeaderComponent,
-    UsersPipe
+    UsersPipe,
+    SchedulerComponent
   ],
   imports: [
     CommonModule,
@@ -45,6 +48,7 @@ import {UsersPipe} from './shared/users.pipe';
     MatSelectModule,
     MatListModule,
     MatExpansionModule,
+    FullCalendarModule,
   ],
 })
 export class AdminModule {

@@ -5,6 +5,7 @@ import {UserInfoComponent} from './user-info/user-info.component';
 import {UsersComponent} from './users/users.component';
 import {MailerComponent} from './mailer/mailer.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {SchedulerComponent} from './scheduler/scheduler.component';
 
 const adminRouters: Routes = [
   {
@@ -12,7 +13,7 @@ const adminRouters: Routes = [
       {path: 'users/:id', component: UserInfoComponent},
       {path: 'users', component: UsersComponent},
       {path: 'mailer', component: MailerComponent},
-      {path: 'rent', component: MailerComponent},
+      {path: 'rent', component: SchedulerComponent},
       {path: '**', component: PageNotFoundComponent}
     ]
   }

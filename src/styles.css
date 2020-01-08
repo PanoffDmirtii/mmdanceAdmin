@@ -1,7 +1,10 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
-
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+/*@import '~@fullcalendar/timegrid/main.css';*/
+/*@import '~@fullcalendar/list/main.css';*/
 
 html, body {
   height: 100%;

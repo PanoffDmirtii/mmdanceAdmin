@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {CanActivate, Router} from '@angular/router';
 import {AuthVkService} from './auth-vk.service';
+import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,12 @@ import {AuthVkService} from './auth-vk.service';
 export class AuthGuard implements CanActivate {
   canLogin = false;
   private adminUsers = ['216737', '49593'];
+
   constructor(
     private auth: AuthVkService,
     private router: Router
   ) {
+    this.canLogin = !environment.production;
   }
 
   logout() {
