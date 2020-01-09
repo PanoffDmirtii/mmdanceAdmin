@@ -18,6 +18,8 @@ import {MatExpansionModule, MatListModule} from '@angular/material';
 
 import {registerLocaleData} from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
+import { NoAccessComponent } from './components/auth/no-access/no-access.component';
+import {AuthGuard} from './auth.guard';
 
 
 registerLocaleData(localeRu, 'ru');
@@ -26,6 +28,7 @@ registerLocaleData(localeRu, 'ru');
 @NgModule({
   declarations: [
     AppComponent,
+    NoAccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ registerLocaleData(localeRu, 'ru');
     MatExpansionModule,
     MatListModule,
   ],
-  providers: [{provide: LOCALE_ID, useValue: 'ru'}],
+  providers: [{provide: LOCALE_ID, useValue: 'ru'}, AuthGuard],
   exports: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <mat-card>
+    <full-calendar
+      locale="ru"
+      defaultView="dayGridMonth"
+      [plugins]="calendarPlugins"
+      [weekends]="true"
+      (dateClick)="handleDateClick($event)"
+      [events]="calendarEvents"
+    ></full-calendar>
+  </mat-card>
+</div>

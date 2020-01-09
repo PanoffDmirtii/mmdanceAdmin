@@ -1,7 +1,7 @@
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Injectable } from "@angular/core";
-import { Subscription } from "../subscription";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Subscription } from '../subscription';
 import {environment} from '../../environments/environment';
 
 @Injectable(
@@ -12,7 +12,7 @@ export class ServiceSubscription {
   constructor(private http: HttpClient) {}
 
   getAudience(): Observable<any> {
-    return this.http.get<Subscription>(this.API_URL)
+    return this.http.get<Subscription>(this.API_URL);
   }
 
 }

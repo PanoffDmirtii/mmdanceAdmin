@@ -7,12 +7,14 @@ import {AuthGuard} from '../../../auth.guard';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  admin;
 
   constructor(
     private auth: AuthGuard
   ) { }
 
   ngOnInit() {
+    this.admin = this.auth.adminSession;
   }
 
   onLogout() {

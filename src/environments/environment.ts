@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:8001'
+  API_URL: 'http://localhost:8001',
+  API_VK_AUTH: 'https://oauth.vk.com/authorize?' +
+    'client_id=7271168&display=page&' +
+    'redirect_uri=https://99df5f66.ngrok.io/vkhook&scope=friends&' +
+    'response_type=token&v=5.103'
 };
 
 /*
