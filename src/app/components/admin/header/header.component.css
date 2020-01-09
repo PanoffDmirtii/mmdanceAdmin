@@ -1,4 +1,11 @@
 .header {
   display: flex;
   justify-content: space-between;
+}:first-child {
+  margin-right: auto;
+ }
+
+img {
+  width: 60px;
+  border-radius: 50%;
 }
