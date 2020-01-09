@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../../../services/users.service';
 import {User} from '../shared/user';
-import { Location } from '@angular/common';
 import {Router} from '@angular/router';
 
 
@@ -24,6 +23,6 @@ export class UsersComponent implements OnInit {
   }
 
   userInfo(userId) {
-    this.router.navigate(['/users', userId]);
+    this.router.navigate(['admin', 'users', userId]);
   }
 }
